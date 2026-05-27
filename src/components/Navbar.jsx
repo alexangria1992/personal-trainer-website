@@ -11,7 +11,11 @@ const Navbar = () => {
     <header className='navbar'>
       <a href='#' className='navbar__logo'>
         <img src={logo} alt='Logo' className='navbar__mark' />
-        <div className='logo__text'></div>
+        {/* <div className='logo__text'>
+          <p>
+            Get <span>Fit</span> With Alex
+          </p>
+        </div> */}
       </a>
 
       <button
