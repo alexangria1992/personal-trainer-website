@@ -61,5 +61,58 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent);
+  width: auto;
+  flex: 0 0 auto;
+
   background: var(--color-surface);
+}
+
+@media (min-width: 768px) {
+  .about {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 48px;
+    align-items: center;
+    padding: 100px var(--container-padding);
+  }
+
+  .about__image {
+    height: 560px;
+  }
+
+  .about__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .about__content {
+    max-width: 560px;
+    overflow: hidden;
+  }
+
+  .about__eyebrow {
+    font-size: 0.9rem;
+  }
+
+  .about__title {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    max-width: 10ch;
+  }
+
+  .about__text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .about__highlights {
+    gap: 12px;
+    margin-top: 34px;
+  }
+
+  .about__highlights span {
+    width: auto;
+    flex: 0 0 auto;
+  }
 }

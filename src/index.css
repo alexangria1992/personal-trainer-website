@@ -20,6 +20,12 @@
   --container-padding: 1.25rem;
 }
 
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 48px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -28,18 +28,15 @@ const Navbar = () => {
 
       {/* MOBILE NAVBAR MENU */}
 
-      {isOpen && (
-        <nav className='navbar__menu'>
-          <a href='#about'>About</a>
-          <a href='#services'>Services</a>
-          <a href='#pricing'>Pricing</a>
-          <a href='#contact'>Contact</a>
-
-          <a href='#contact' className='navbar__cta'>
-            Book Now
-          </a>
-        </nav>
-      )}
+      <nav className={`navbar__menu ${isOpen ? 'navbar__menu--open' : ''}`}>
+        <a href='#about'>About</a>
+        <a href='#services'>Services</a>
+        <a href='#pricing'>Testimonial</a>
+        <a href='#contact'>Contact</a>
+      </nav>
+      <a href='#contact' className='navbar__cta'>
+        Book Now
+      </a>
     </header>
   );
 };

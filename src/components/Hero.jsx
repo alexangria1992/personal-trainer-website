@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import heroImg from '../../images/dumbbell-squat.png';
+import heroImg from '../../images/dumbbell-squat-2.png';
 
 const Hero = () => {
   return (
@@ -9,7 +9,9 @@ const Hero = () => {
         <img src={heroImg} alt='Hero' />
       </div>
       <div className='hero__content'>
-        <p className='hero__eyebrow'>Personal Training Auckland</p>
+        <p className='hero__eyebrow'>
+          Get <span>Fit</span> with Alex
+        </p>
         <h1 className='hero__title'>
           Build <span>Strength</span>.<br />
           Lose{' '}

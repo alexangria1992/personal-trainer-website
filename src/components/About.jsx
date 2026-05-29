@@ -23,7 +23,7 @@ const About = () => {
           consistently and found myself not liking the way I looked or felt.
           Through trial and error, learning and focusing on becoming a better,
           stronger and more confident person, I realized the importance of
-          traning and how it can change the way you look, feel and move.
+          training and how it can change the way you look, feel and move.
         </p>
 
         <p className='about__text'>
