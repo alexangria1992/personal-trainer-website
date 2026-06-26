@@ -1,8 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Dumbbell, Monitor, Package } from 'lucide-react';
 import './Services.css';
 import servicesImg from '../../images/services-photo-2.png';
-
+import { fadeIn, imageReveal, staggerContainer } from '../lib/animations';
 const services = [
   {
     icon: <Dumbbell size={22} />,
@@ -22,35 +23,50 @@ const services = [
 ];
 const Services = () => {
   return (
-    <section className='services' id='services'>
-      <div className='services__image'>
+    <motion.section
+      className='services'
+      id='services'
+      variants={staggerContainer}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: true, amount: 0.25 }}
+    >
+      <motion.div className='services__image' variants={imageReveal}>
         <img src={servicesImg} alt='Alex training with dumbbells' />
-      </div>
-      <div className='services__content'>
-        <p className='services__eyebrow'>What I Offer</p>
+      </motion.div>
+      <motion.div className='services__content' variants={staggerContainer}>
+        <motion.p className='services__eyebrow' variants={fadeIn('up', 0.1)}>
+          What I Offer
+        </motion.p>
 
-        <h2 className='services__title'>Training Built Around Your Goal.</h2>
+        <motion.h2 className='services__title' variants={fadeIn('up', 0.2)}>
+          Training Built Around Your Goal.
+        </motion.h2>
 
-        <p className='services__intro'>
+        <motion.p className='services__intro' variants={fadeIn('up', 0.35)}>
           Whether you want to build strength, lose fat, or feel more confident
           in the gym, I offer clear coaching options to help you train with
           purpose.
-        </p>
+        </motion.p>
 
-        <div className='services__list'>
-          {services.map((service) => (
-            <article className='service-card' key={service.title}>
+        <motion.div className='services__list' variants={staggerContainer}>
+          {services.map((service, index) => (
+            <motion.article
+              className='service-card'
+              key={service.title}
+              variants={fadeIn('up', 0.45 + index * 0.15)}
+            >
               <div className='service-card__icon'>{service.icon}</div>
 
               <div>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
               </div>
-            </article>
+            </motion.article>
           ))}
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 
