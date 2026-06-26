@@ -3,19 +3,16 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 import logo from '../../images/logo-light.svg';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const enquiryFormLink = 'https://forms.gle/DnjrkBdjY9Gg9VV86';
 
   return (
     <header className='navbar'>
-      <a href='#' className='navbar__logo'>
+      <a className='navbar__logo'>
         <img src={logo} alt='Logo' className='navbar__mark' />
-        {/* <div className='logo__text'>
-          <p>
-            Get <span>Fit</span> With Alex
-          </p>
-        </div> */}
       </a>
 
       <button
@@ -29,12 +26,49 @@ const Navbar = () => {
       {/* MOBILE NAVBAR MENU */}
 
       <nav className={`navbar__menu ${isOpen ? 'navbar__menu--open' : ''}`}>
-        <a href='#about'>About</a>
-        <a href='#services'>Services</a>
-        <a href='#pricing'>Testimonial</a>
-        <a href='#contact'>Contact</a>
+        <Link
+          to='about'
+          smooth={true}
+          duration={1200}
+          offset={-90}
+          onClick={() => setIsOpen(false)}
+        >
+          About
+        </Link>
+        <Link
+          to='services'
+          smooth={true}
+          duration={1200}
+          offset={-90}
+          onClick={() => setIsOpen(false)}
+        >
+          Services
+        </Link>
+        <Link
+          to='testimonial'
+          smooth={true}
+          duration={1200}
+          offset={-90}
+          onClick={() => setIsOpen(false)}
+        >
+          Testimonial
+        </Link>
+        <Link
+          to='contact'
+          smooth={true}
+          duration={1200}
+          offset={-90}
+          onClick={() => setIsOpen(false)}
+        >
+          Contact
+        </Link>
       </nav>
-      <a href='#contact' className='navbar__cta'>
+      <a
+        href={enquiryFormLink}
+        target='_blank'
+        rel='noreferrer'
+        className='navbar__cta'
+      >
         Book Now
       </a>
     </header>

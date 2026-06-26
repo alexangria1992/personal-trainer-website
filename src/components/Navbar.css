@@ -91,6 +91,11 @@
   color: var(--color-accent);
 }
 
+.navbar__menu a,
+.navbar__menu span {
+  cursor: pointer;
+}
+
 .navbar__cta {
   margin-top: 20px;
   padding: 18px 24px;
@@ -123,6 +128,11 @@
     flex-direction: row;
     align-items: center;
     gap: 32px;
+  }
+
+  .navbar__menu a,
+  .navbar__menu span {
+    cursor: pointer;
   }
 
   .navbar__cta {

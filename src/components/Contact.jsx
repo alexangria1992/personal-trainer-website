@@ -36,6 +36,8 @@ const overlayReveal = {
 };
 
 const Contact = () => {
+  const enquiryFormLink = 'https://forms.gle/DnjrkBdjY9Gg9VV86';
+
   return (
     <motion.section
       className='contact'
@@ -100,7 +102,9 @@ const Contact = () => {
         </motion.div>
 
         <motion.a
-          href='mailto:alex040892@gmail.com'
+          href={enquiryFormLink}
+          target='_blank'
+          rel='noreferrer'
           className='contact__button'
           variants={fadeIn('up', 0.9)}
         >

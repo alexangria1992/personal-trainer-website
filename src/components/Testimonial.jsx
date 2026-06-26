@@ -5,10 +5,12 @@ import './Testimonial.css';
 import { fadeIn, imageReveal, staggerContainer } from '../lib/animations';
 
 const Testimonial = () => {
+  const enquiryFormLink = 'https://forms.gle/DnjrkBdjY9Gg9VV86';
+
   return (
     <motion.section
       className='testimonial'
-      id='results'
+      id='testimonial'
       variants={staggerContainer}
       initial='hidden'
       whileInView='show'
@@ -52,7 +54,9 @@ const Testimonial = () => {
         </motion.div>
 
         <motion.a
-          href='#contact'
+          href={enquiryFormLink}
+          target='_blank'
+          rel='noreferrer'
           className='testimonial__button'
           variants={fadeIn('up', 0.65)}
         >

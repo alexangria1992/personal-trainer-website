@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { fadeIn, imageReveal, staggerContainer } from '../lib/animations';
 
 const Hero = () => {
+  const enquiryFormLink = 'https://forms.gle/DnjrkBdjY9Gg9VV86';
   return (
     <section className='hero'>
       <motion.div
@@ -39,7 +40,12 @@ const Hero = () => {
           stronger, move better, and build confidence in the gym.
         </motion.p>
         <motion.div className='hero__actions' variants={fadeIn('up', 0.65)}>
-          <a href='#contact' className='hero__btn'>
+          <a
+            href={enquiryFormLink}
+            target='_blank'
+            rel='noreferrer'
+            className='hero__btn'
+          >
             Book a Free Consultation
           </a>
 
