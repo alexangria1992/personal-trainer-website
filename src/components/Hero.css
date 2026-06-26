@@ -195,10 +195,14 @@
 @media (min-width: 1024px) {
   .hero {
     min-height: 100vh;
-    padding: 118px 70px 44px;
+    padding-top: 150px;
     display: flex;
     align-items: center;
     background: var(--color-bg);
+  }
+
+  .hero__content {
+    padding-top: 30px;
   }
 
   .hero__image {
@@ -275,7 +279,7 @@
 
 @media (min-width: 1260px) {
   .hero {
-    padding: 78px 88px 44px;
+    padding: 140px 88px 70px;
   }
 
   .hero__image img {
