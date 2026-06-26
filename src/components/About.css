@@ -116,3 +116,137 @@
     flex: 0 0 auto;
   }
 }
+@media (min-width: 1024px) {
+  .about {
+    grid-template-columns: minmax(360px, 0.9fr) minmax(500px, 1.1fr);
+    gap: 64px;
+    padding: 120px clamp(48px, 5vw, 80px);
+  }
+
+  .about__image {
+    height: 640px;
+    margin-bottom: 0;
+    border-radius: 34px;
+  }
+
+  .about__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .about__content {
+    max-width: 680px;
+    overflow: visible;
+  }
+
+  .about__eyebrow {
+    font-size: 0.9rem;
+  }
+
+  .about__title {
+    font-size: clamp(3.5rem, 5vw, 5.2rem);
+    max-width: 10ch;
+  }
+
+  .about__text {
+    max-width: 620px;
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .about__highlights {
+    gap: 12px;
+    margin-top: 36px;
+  }
+
+  .about__highlights span {
+    width: auto;
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 1260px) {
+  .about {
+    grid-template-columns: minmax(420px, 0.9fr) minmax(620px, 1.1fr);
+    gap: 88px;
+    padding: 140px 72px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .about__image {
+    height: 700px;
+    border-radius: 36px;
+  }
+
+  .about__content {
+    max-width: 700px;
+  }
+
+  .about__title {
+    font-size: clamp(4.4rem, 4.8vw, 6rem);
+    max-width: 10ch;
+  }
+
+  .about__text {
+    max-width: 650px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .about__highlights {
+    margin-top: 40px;
+    gap: 14px;
+  }
+
+  .about__highlights span {
+    padding: 12px 18px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (min-width: 1260px) {
+  .about {
+    grid-template-columns: 520px 760px;
+    gap: 110px;
+    padding: 160px 96px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .about__image {
+    height: 760px;
+    border-radius: 40px;
+  }
+
+  .about__content {
+    max-width: 760px;
+  }
+
+  .about__eyebrow {
+    font-size: 0.95rem;
+  }
+
+  .about__title {
+    font-size: clamp(5rem, 4.2vw, 6.4rem);
+    max-width: 9ch;
+  }
+
+  .about__text {
+    max-width: 700px;
+    font-size: 1.15rem;
+    line-height: 1.85;
+  }
+
+  .about__highlights {
+    gap: 16px;
+    margin-top: 42px;
+  }
+
+  .about__highlights span {
+    padding: 13px 20px;
+    font-size: 0.85rem;
+  }
+}
