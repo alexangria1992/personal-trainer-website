@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 import logo from '../../images/logo-light.svg';
-import { Link } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +11,13 @@ const Navbar = () => {
 
   return (
     <header className='navbar'>
-      <a className='navbar__logo'>
+      <button
+        className='navbar__logo'
+        onClick={() => scroll.scrollToTop({ duration: 1200, smooth: true })}
+        aria-label='Scroll to top'
+      >
         <img src={logo} alt='Logo' className='navbar__mark' />
-      </a>
+      </button>
 
       <button
         className='navbar__toggle'
