@@ -169,31 +169,37 @@
 
 @media (min-width: 1260px) {
   .about {
-    grid-template-columns: minmax(420px, 0.9fr) minmax(620px, 1.1fr);
-    gap: 88px;
-    padding: 140px 72px;
+    width: min(calc(100% - 96px), 1400px);
     max-width: 1400px;
     margin: 0 auto;
+    padding: 140px 0;
+    display: grid;
+    grid-template-columns: minmax(0, 520px) minmax(0, 620px);
+    gap: 64px;
+    overflow: visible;
   }
 
   .about__image {
-    height: 700px;
-    border-radius: 36px;
+    width: 100%;
+    min-width: 0;
   }
 
   .about__content {
-    max-width: 700px;
+    width: 100%;
+    min-width: 0;
+    max-width: 620px;
+    overflow: visible;
   }
 
   .about__title {
-    font-size: clamp(4.4rem, 4.8vw, 6rem);
-    max-width: 10ch;
+    max-width: 9ch;
+    font-size: clamp(4.4rem, 5vw, 5.7rem);
+    line-height: 0.9;
   }
 
   .about__text {
-    max-width: 650px;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .about__highlights {
@@ -204,49 +210,5 @@
   .about__highlights span {
     padding: 12px 18px;
     font-size: 0.82rem;
-  }
-}
-
-@media (min-width: 1260px) {
-  .about {
-    grid-template-columns: 520px 760px;
-    gap: 110px;
-    padding: 160px 96px;
-    max-width: 1600px;
-    margin: 0 auto;
-  }
-
-  .about__image {
-    height: 760px;
-    border-radius: 40px;
-  }
-
-  .about__content {
-    max-width: 760px;
-  }
-
-  .about__eyebrow {
-    font-size: 0.95rem;
-  }
-
-  .about__title {
-    font-size: clamp(5rem, 4.2vw, 6.4rem);
-    max-width: 9ch;
-  }
-
-  .about__text {
-    max-width: 700px;
-    font-size: 1.15rem;
-    line-height: 1.85;
-  }
-
-  .about__highlights {
-    gap: 16px;
-    margin-top: 42px;
-  }
-
-  .about__highlights span {
-    padding: 13px 20px;
-    font-size: 0.85rem;
   }
 }
